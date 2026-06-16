@@ -1,0 +1,174 @@
+.app {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+  text-align: left;
+}
+
+.app-header {
+  text-align: center;
+  margin-bottom: 1.75rem;
+}
+
+.app-header h1 {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.subtitle {
+  margin: 0.25rem 0 0;
+  color: #888;
+  font-size: 0.95rem;
+}
+
+/* 입력 폼 */
+.todo-form {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.todo-input {
+  flex: 1;
+  padding: 0.7rem 0.9rem;
+  font-size: 1rem;
+  border: 1px solid #d0d0d8;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.15s;
+}
+
+.todo-input:focus {
+  border-color: #6366f1;
+}
+
+/* 버튼 공통 */
+.btn {
+  border: none;
+  border-radius: 8px;
+  padding: 0.55rem 0.9rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.15s, background-color 0.15s;
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn-add {
+  background-color: #6366f1;
+  color: #fff;
+  white-space: nowrap;
+}
+
+.btn-edit {
+  background-color: #e0e7ff;
+  color: #4338ca;
+}
+
+.btn-delete {
+  background-color: #fee2e2;
+  color: #b91c1c;
+}
+
+.btn-save {
+  background-color: #6366f1;
+  color: #fff;
+}
+
+.btn-cancel {
+  background-color: #f1f1f4;
+  color: #555;
+}
+
+/* 목록 */
+.todo-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.todo-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  border: 1px solid #ececf0;
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+.todo-checkbox {
+  width: 1.15rem;
+  height: 1.15rem;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.todo-title {
+  flex: 1;
+  font-size: 1rem;
+  color: #1f2937;
+  word-break: break-all;
+  cursor: pointer;
+}
+
+.todo-item.completed .todo-title {
+  text-decoration: line-through;
+  color: #aaa;
+}
+
+.todo-edit-input {
+  flex: 1;
+  padding: 0.45rem 0.6rem;
+  font-size: 1rem;
+  border: 1px solid #6366f1;
+  border-radius: 6px;
+  outline: none;
+}
+
+.todo-actions {
+  display: flex;
+  gap: 0.4rem;
+  flex-shrink: 0;
+}
+
+/* 상태 메시지 */
+.empty,
+.loading {
+  text-align: center;
+  color: #999;
+  padding: 2rem 0;
+}
+
+.error {
+  background-color: #fef2f2;
+  color: #b91c1c;
+  border: 1px solid #fecaca;
+  border-radius: 8px;
+  padding: 0.7rem 1rem;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  .todo-item {
+    background-color: #1e1e24;
+    border-color: #2e2e38;
+  }
+  .todo-title {
+    color: #e5e7eb;
+  }
+  .todo-input,
+  .todo-edit-input {
+    background-color: #1e1e24;
+    color: #e5e7eb;
+  }
+}
